@@ -1,10 +1,25 @@
 local status_ok, configs = pcall(require, "nvim-treesitter.configs")
 if not status_ok then
+  print("failed to load: nvim-treesitter.configs")
   return
 end
 
 configs.setup {
-  ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+  ensure_installed = {
+    "bash",
+    "c",
+    "javascript",
+    "json",
+    "lua",
+    "python",
+    "typescript",
+    "tsx",
+    "css",
+    "rust",
+    "go",
+    "java",
+    "yaml",
+  }, -- one of "all", "maintained" (parsers with maintainers), or a list of languages
   sync_install = false, -- install languages synchronously (only applied to `ensure_installed`)
   ignore_install = { "" }, -- List of parsers to ignore installing
   autopairs = {
@@ -20,4 +35,18 @@ configs.setup {
     enable = true,
     enable_autocmd = false,
   },
+  rainbow = {
+      enable = true,
+      extended_mode = true,
+      max_file_lines = nil,
+      colors = {
+        "#bf7a29",
+        "#bf3f34",
+        "#627a92",
+        "#75507b",
+        "#757978",
+        "#c7a551",
+    },
+  },
 }
+

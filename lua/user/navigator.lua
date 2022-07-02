@@ -1,0 +1,1 @@
+-- vim.cmd("let g:tmux_navigator_insert_mode = 1")

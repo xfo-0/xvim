@@ -1,6 +1,7 @@
 -- Setup nvim-cmp.
 local status_ok, npairs = pcall(require, "nvim-autopairs")
 if not status_ok then
+  print("failed to load: nvim-autopairs")
   return
 end
 
@@ -18,7 +19,7 @@ npairs.setup {
     pattern = string.gsub([[ [%'%"%)%>%]%)%}%,] ]], "%s+", ""),
     offset = 0, -- Offset from pattern match
     end_key = "$",
-    keys = "qwertyuiopzxcvbnmasdfghjkl",
+    keys = "asonetuhcrq/",
     check_comma = true,
     highlight = "PmenuSel",
     highlight_grey = "LineNr",

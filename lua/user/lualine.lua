@@ -1,5 +1,6 @@
 local status_ok, lualine = pcall(require, "lualine")
 if not status_ok then
+  print("failed to load: lualine")
 	return
 end
 
@@ -70,6 +71,7 @@ lualine.setup({
 		section_separators = { left = "", right = "" },
 		disabled_filetypes = { "alpha", "dashboard", "NvimTree", "Outline" },
 		always_divide_middle = true,
+    global_status = true
 	},
 	sections = {
 		lualine_a = { branch, diagnostics },

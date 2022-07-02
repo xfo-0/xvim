@@ -1,5 +1,6 @@
 local status_ok, indent_blankline = pcall(require, "indent_blankline")
 if not status_ok then
+  print("failed to load: indent_blankline")
 	return
 end
 
@@ -59,12 +60,15 @@ vim.wo.colorcolumn = "99999"
 
 indent_blankline.setup({
 	-- show_end_of_line = true,
-	-- space_char_blankline = " ",
-	show_current_context = true,
-	-- show_current_context_start = true,
-	-- char_highlight_list = {
-	--   "IndentBlanklineIndent1",
-	--   "IndentBlanklineIndent2",
-	--   "IndentBlanklineIndent3",
-	-- },
+	space_char_blankline = " ",
+    show_current_context = true,
+    show_current_context_start = true,
+    char_highlight_list = {
+        "IndentBlanklineIndent1",
+        "IndentBlanklineIndent2",
+        "IndentBlanklineIndent3",
+        "IndentBlanklineIndent4",
+        "IndentBlanklineIndent5",
+        "IndentBlanklineIndent6",
+    },
 })
