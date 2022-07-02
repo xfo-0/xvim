@@ -8,8 +8,7 @@ gcl https://github.com/xfo-0/xvim ~/.config/nvim
 Open `nvim` and enter the following:
 ```
 :checkhealth
-
 ```
+
 > The computing scientist's main challenge is not to get confused by the complexities of his own making. 
 \- Edsger W. Dijkstra
-```
